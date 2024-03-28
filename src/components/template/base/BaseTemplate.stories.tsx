@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import BaseTemplate, { IBaseTemplate } from './BaseTemplate';
+import BaseTemplate from './BaseTemplate';
 
 const BaseFoo = {
   title: 'template/BaseTemplate',
@@ -10,8 +10,13 @@ const BaseFoo = {
 export default BaseFoo;
 type BaseStory = StoryObj<typeof BaseFoo>;
 
-export const test: BaseStory = {
+export const Test: BaseStory = {
   args: {
     sampleTextProp: '123',
+  },
+};
+export const Test1: BaseStory = {
+  args: {
+    sampleTextProp: '456',
   },
 };
