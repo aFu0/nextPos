@@ -1,4 +1,5 @@
-import style from './LayoutHeader.module.css';
+import style from './LayoutHeader.module.scss';
+import SvgIcon from '@/components/SvgIcon/SvgIcon';
 
 // import { MessageOutlined } from '@ant-design/icons';
 const LayoutHeader = () => {
@@ -6,7 +7,7 @@ const LayoutHeader = () => {
     <div className={style.layout_header}>
       <div>LOGO</div>
       <div>
-        {/* <MessageOutlined /> */}
+        <SvgIcon className={style.svg} iconName="user1" />
       </div>
     </div>
   );

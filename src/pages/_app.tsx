@@ -5,12 +5,12 @@ import theme from '@/theme/themeConfig';
 
 import LayoutHeader from '@/components/layout/Header/LayoutHeader';
 import LayoutMenu from '@/components/layout/Menu/LayoutMenu';
+import Content from '@/components/layout/Content/Content';
 
 import '@/styles/reset.css';
 import '@/pages/app.css';
 
-const App = ({ Component, pageProps }: AppProps) => {
-  console.log(pageProps, 'pageProps');
+const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <ConfigProvider theme={theme}>
       <div className="layout">
@@ -19,7 +19,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         </div>
         <div className="layout-content">
           <LayoutMenu />
-          <Component {...pageProps} />
+          <Content
+            Component={Component}
+            pageProps={pageProps}
+            router={router}
+          />
         </div>
       </div>
     </ConfigProvider>

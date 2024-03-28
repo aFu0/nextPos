@@ -1,8 +1,20 @@
-import User from '@/icons/svgs/user.svg';
-const SvgIcon = ({ className, size = '24' }: any) => {
-  // const SvgIcon =
+import style from './Svgicon.module.scss';
 
-  return <User className={className} />;
+export interface SvgIconProps {
+  iconName: string;
+  className?: string;
+}
+
+const SvgIcon = (props: SvgIconProps) => {
+  const { className, iconName } = props;
+
+  return (
+    <i aria-hidden="true">
+      <svg className={`${style['svg-class']} ${className}`}>
+        <use xlinkHref={`#${iconName}`}></use>
+      </svg>
+    </i>
+  );
 };
 
 export default SvgIcon;

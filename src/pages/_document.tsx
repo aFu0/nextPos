@@ -5,7 +5,12 @@ import type { DocumentContext } from 'next/document';
 
 const MyDocument = () => (
   <Html lang="en">
-    <Head />
+    <Head>
+      <script
+        defer={true}
+        src={'http://at.alicdn.com/t/c/font_4485405_1uwcfblwa8s.js'}
+      />
+    </Head>
     <body>
       <Main />
       <NextScript />

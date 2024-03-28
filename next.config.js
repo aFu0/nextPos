@@ -1,3 +1,11 @@
-const withTM = require('next-transpile-modules')(['@ant-design/icons'])
+const path = require('path')
 
-module.exports = withTM({})
+const nextConfig = {
+  reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, './styles')],
+    prependData: `@import "@/styles/global.scss";`
+  }
+}
+
+module.exports = nextConfig

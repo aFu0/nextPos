@@ -1,14 +1,7 @@
-import { Button } from 'antd/lib';
-import Home from '@/pages/Home';
+import Home from '@/app/Home';
 
 const AppIndex = () => {
-  return (
-    <div className='appindex'>
-      <Button type="primary">anniu</Button>
-      AppIndex
-      <Home />
-    </div>
-  );
+  return <Home />;
 };
 
 export default AppIndex;
